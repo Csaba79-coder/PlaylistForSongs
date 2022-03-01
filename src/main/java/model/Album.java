@@ -39,7 +39,7 @@ public class Album {
         return null;
     }
 
-    private boolean addToPlayList(int trackNumber, LinkedList<Song> playList) {
+    public boolean addToPlayList(int trackNumber, LinkedList<Song> playList) {
         int index  = trackNumber - 1;
         if ((index >= 0) && (index <= this.songs.size())) {
             playList.add(this.songs.get(index));
@@ -50,7 +50,7 @@ public class Album {
     }
 
     // this one is overloading the previous method, same name and return type, but different parameters in method!
-    private boolean addToPlayList(String title, LinkedList<Song> playList) {
+    public boolean addToPlayList(String title, LinkedList<Song> playList) {
         Song checkedSong = findSong(title);
         if (checkedSong != null) {
             playList.add(checkedSong);

@@ -1,0 +1,11 @@
+case 6:
+                    try {
+                        if (playList.size() > 0) {
+                            listIterator.remove();
+                        }
+                        break;
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        new Menu().printMenu();
+                    }
+                    break;
